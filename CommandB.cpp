@@ -10,7 +10,4 @@ void CommandB::execute()
     cout << "command B" << endl;
 }
 
-namespace CommandiBAstatis__run 
-{
-    int i = CommandRegistry::getInstance().addType<CommandB>("CommandB");
-};
+REGISTER_COMMAND(CommandB)

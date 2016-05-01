@@ -6,6 +6,8 @@
 
 typedef map<string,BaseCommand*> map_type;
 
+#define REGISTER_COMMAND(commandType) namespace __##commandType##_static__run { int i = CommandRegistry::getInstance().addType<commandType>(#commandType); };
+
 class CommandRegistry
 {
 public:
